@@ -1,0 +1,76 @@
+body{
+    font-family: Helvetica;
+}
+
+h1{
+    color: #000000;
+    font-size: 50px;
+}
+
+thead:nth-child(1n){
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 10px 10px 10px;
+}
+
+thead td:nth-child(1n) {
+    font-size: 24px;
+    text-align: left;
+    padding: 0 25px 0 3px;
+    height: 33px;
+    width: 311px;
+}
+ tbody:nth-child(2n){
+     background-color: #ffffff;
+     color: #000;
+     padding: 10px 10px 10px 10px;
+     font-size: 20px;
+ }
+
+ tbody td:nth-child(2n) {
+     font-size: 20px;
+     text-align: left;
+     padding: 0 25px 0 3px;
+     height: 36px;
+     width: 311px;
+ }
+ tbody td:nth-child(2n):before{
+     content: "$";
+     font-size: 21px;
+ }
+
+tbody tr:nth-child(2n){
+    font-size: 20px;
+    text-align: left;
+    padding: 0 25px 0 3px;
+    height: 36px;
+    width: 311px;
+    background-color: #b3d4fc;
+    color: black;
+}
+
+input:nth-child(2){
+    background-color: #008000;
+    color: #fff;
+    border-color: #008000;
+    padding: 2px 10px 4px 11px;
+    font-size: 12px;
+}
+
+input:nth-child(3){
+    background-color: #ff0000;
+    color: #fff;
+    border-color: #ff0000;
+    padding: 2px 10px 4px 11px;
+    font-size: 12px;
+    text-align: center;
+}
+
+tbody td:nth-child(3n):before{
+    content: "x ";
+
+}
+
+tbody td:nth-child(3n):after{
+    content: " =";
+}

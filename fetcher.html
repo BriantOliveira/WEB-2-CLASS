@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+
+       var users = new Object();
+       var keys = {};
+
+    // Using fetch method to call the data
+       fetch('MOCK_DATA.csv')
+           .then(function(response) {
+             //turned the array into text
+           var res = response.text();
+           return res;
+           //returned the the array and split it into lines
+       }).then(function(text) {
+          var data = text.split('\n');
+          //used the method shift to get the first element of the arrya
+          // and put it in the end
+          var keyStr = data.shift();
+          //used the method split again but to split it with ,
+          var keys = keyStr.split(',');
+          console.log(keys);
+          // looped the data and used -1 due to the shift method used. -1 was used
+          // so the value of the keys would not show on the end
+            for(var i = 0; i < data.length; i++){
+
+              //now the array became and array of arrays
+              //so I used the method .split to split the arrays
+              // and seperate the elements
+              var userArray = data[i].split(",");
+              for(var i = 0; i < data.length; i++) {
+
+
+
+              //printed the var to make sure the code was working and diplay the array
+              // console.log(userArray);
+
+
+
+  // var userArray = data[i].split(",");
+  //for(var j = 0; j < userArray.length; j++)
+
+
+                  var user = {};
+
+                  user[keys[i]] = data[i];
+                  user[keys[0]] = data[i];
+                  user[keys[1]] = data[i];
+                  user[keys[2]] = data[i];
+                  user[keys[3]] = data[i];
+                  user[keys[4]] = data[i];
+                  user[keys[5]] = data[i];
+                  user[keys[6]] = Number(data[i]);
+                  user[keys[7]] = Number(data[i]);
+                  user[keys[8]]= new Date(Number(data[i])).toUTCString();
+
+
+
+
+             }
+
+                  //  console.log(output);
+
+
+              // userArray[0] id
+              // userArray[1] firstname
+            }
+
+
+           // loop through each user
+              // split each user on the ,
+              // create an object
+              // loop through each key and assign a value from the user array
+
+          //  for(var i = 0; i < data[0].length; i++){
+          //    // return keys.push(data[0][i]);
+          //  }
+
+          //  //Init a new user object to the users
+          //  for(var i = 1; i < data.length; i++) {
+          //      data[i] = data[i].split(',');
+
+
+
+
+//               //Calling randomString
+//
+//               var randomValue = randomString(201, 'Luke, Cliff, lukegmail.com, male, 23');
+//
+//               //function that generates new random users
+//               function randomString(len, chartSet) {
+//                   chartSet = chartSet || 'this is a test';
+//                   randomString = '';
+//                   for(var i = 0; i < len; i++){
+//                       var randomPoz = Math.floor(Math.random() * chartSet.length);
+//                       randomString += chartSet.substring(randomPoz,randomPoz +1);
+//                   }
+//                        return randomString;
+//               }
+
+
+        });
+
+        // loop through each item in userArray
+
+        // or
+
+        // study examples
+        // var sum = [1,2,3].reduce(function(a, n){
+        //   return a + n;
+        // });
+        //
+        // var userObj = userArray.reduce(function(user, n, i) {
+        //   // var numbers = ["one", "two", "three"];
+        //   return user[keys[i]] = n;
+        // }, {});
+        //
+        //
+        //
+        //
+        // // {one:1, two:2, three:3}
+        //
+        // var greetings = ["Joe", "Ann", "Jim"].map(function(name){
+        //   return "Hello " + name;
+        // });
+        // // greetings ["Hello Joe", "Hello Ann", "Hello Jim"]
+        //
+        //
+        // // var obj = {}
+        // // for(var i = 0; i < userArray.length; ++1);
+        //
+        // // [id, first, last,gender, email, ...]
+        // // [1, joe, smith, male, email, ...]
+        //
+        // //Study examples end here
+
+
+        // .catch(function(err){
+        //   console.log(err);
+        // });
+
+      //  console.log(users);
+
+   </script>
+</head>
+<body>
+
+</body>
+</html>
